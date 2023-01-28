@@ -60,8 +60,13 @@ img{
 }
 
 .section, .footer{
-    margin: 6rem 16rem;
-    padding: 4rem 2rem 2rem 2rem;
+    margin: 7rem 16rem;
+    padding: 6rem 2rem 4rem 2rem;
+}
+
+.service-py{
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 }
 
 .all-section{
@@ -190,6 +195,10 @@ img{
     gap: 2rem;
 }
 
+.nav .fa-xmark{
+    display: none;
+}
+
 .nav-item {
     margin: 0 1rem;
 }
@@ -231,6 +240,7 @@ img{
     height: 1.5rem;
     width: 2rem;
 }
+
 
 /* PRESENTATION SECTION STYLING  */
 
@@ -455,7 +465,6 @@ img{
     height: 150px;
     padding: 7rem 3rem;
     transition: all 0.3s ease;
-    cursor: pointer;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -1053,6 +1062,22 @@ img{
 
     .menu{
         display: block;
+        cursor: pointer;
+    }
+
+    .nav .fa-xmark{
+        display: none;
+        font-size: 3rem;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    .nav .fa-xmark.close_active{
+        display: block;
+    }
+
+    .menu_hidden{
+        display: none;
     }
 
     .nav-links{
@@ -1062,7 +1087,7 @@ img{
         top: 8rem;
         left: 0;
         border-top: 1px solid rgba(255,255,255,0.2);
-        background: rgba(0, 0, 0,0.5);
+        background: rgba(0, 0, 0,0.9);
         gap: 3rem;
         padding: 4rem 0;
         z-index: 999;

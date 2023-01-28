@@ -7,11 +7,23 @@ const navlinksAll = document.querySelectorAll('.nav_link');
 
 const profilSlider = document.querySelector('.profil-slider');
 const profilSlide = document.querySelectorAll('.profil-slide');
+const closeBtn = document.querySelector('.fa-xmark');
 
 
 menu.addEventListener('click', function(){
     navLinks.classList.add('nav-active');
+    menu.classList.add('menu_hidden');
+    closeBtn.classList.add('close_active');
 });
+
+closeBtn.addEventListener('click', function(){
+    navLinks.classList.remove('nav-active');
+    menu.classList.remove('menu_hidden');
+    closeBtn.classList.remove('close_active');
+});
+
+
+
 
 navlinksAll.forEach(li => {
     li.addEventListener('click', function(e){
