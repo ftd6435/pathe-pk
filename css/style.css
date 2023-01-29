@@ -84,6 +84,12 @@ img{
     border-radius: 30px;
     position: relative;
     transition: all 0.3s ease;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-btn::before{
@@ -107,6 +113,8 @@ img{
     font-weight: 400;
     font-size: 1.8rem;
     margin-right: 3rem;
+    position: absolute;
+    word-wrap: break-word;
 }
 
 .btn-icon{
@@ -237,8 +245,9 @@ img{
 
 .menu{
     display: none;
-    height: 1.5rem;
+    height: 1.2rem;
     width: 2rem;
+    margin-bottom: 5px;
 }
 
 
@@ -773,6 +782,20 @@ img{
     text-align: center;
 }
 
+.available .avai-bg .avai-content .main-btn{
+    display: inline-block;
+    position: relative;
+}
+
+.available .avai-bg .avai-content .main-btn .btn-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 0;
+    width: 80%;
+}
+
 .available .avai-bg .avai-content h1{
     margin-bottom: 1rem;
     font-size: 4rem;
@@ -925,6 +948,7 @@ img{
     display: inline-block;
     margin-top: 2rem;
     text-align: center;
+    font-size: 1.3rem;
     color: var(--light-white);
 }
 
@@ -1088,7 +1112,7 @@ img{
         left: 0;
         border-top: 1px solid rgba(255,255,255,0.2);
         background: rgba(0, 0, 0,0.9);
-        gap: 3rem;
+        gap: 2rem;
         padding: 4rem 0;
         z-index: 999;
         transform: translateY(-2%) scale(0);

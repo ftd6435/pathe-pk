@@ -9,6 +9,8 @@ const profilSlider = document.querySelector('.profil-slider');
 const profilSlide = document.querySelectorAll('.profil-slide');
 const closeBtn = document.querySelector('.fa-xmark');
 
+//////////////////////////////////////////////
+///// CODE MENU OPEN AND CLOSE
 
 menu.addEventListener('click', function(){
     navLinks.classList.add('nav-active');
@@ -22,8 +24,12 @@ closeBtn.addEventListener('click', function(){
     closeBtn.classList.remove('close_active');
 });
 
+//////////////////////////////////////////////
 
 
+
+//////////////////////////////////////////////
+//////// CODE OF HOME PAGE SLIDE 
 
 navlinksAll.forEach(li => {
     li.addEventListener('click', function(e){
@@ -64,8 +70,12 @@ const autoPlay = function(){
 
 setInterval(autoPlay,5000);
 
+/////// END OF SLIDE CODE
+//////////////////////////////////////////////
 
-///////////////////////////////////
+
+
+/////////////////////////////////////////////
 // STICKY NAVBAR
 
 const header = document.querySelector('.header');
@@ -79,8 +89,12 @@ window.addEventListener('scroll', function(){
     }
 });
 
-/////////////////////////////////////////////
-//// SCROLL REACH SECTION
+/////// END OF STICKY CODE
+//////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+//// SCROLL REACH SECTION WHICH IS LINK TO THE NAVBAR
 
 const sections = document.querySelectorAll('section');
 
@@ -97,15 +111,19 @@ const sObserves = function(entries, observe){
 
 const options = function(){
     root: null;
-    threshold: 0.2;
+    threshold: 0.1;
 }
 
 const secObserve = new IntersectionObserver(sObserves, options);
 
 sections.forEach(s => secObserve.observe(s));
 
-/////////////////////////////////////////////
-//// HIDDEN SECTION
+///////// END OF REACH SECTION WHICH IS LINK TO THE NAVBAR
+//////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+//// HIDDEN SECTION AND APPEAR WHEN WE RICH IT
 
 const allSections = document.querySelectorAll('.all-section');
 
@@ -119,7 +137,7 @@ const allSeObserve = function(entries, observe){
 
 const allSecObserve = new IntersectionObserver(allSeObserve, {
     root: null,
-    threshold: 0.3
+    threshold: 0.2
 });
 
 allSections.forEach(as => {
@@ -127,7 +145,11 @@ allSections.forEach(as => {
     as.classList.add('section__hidden');
 })
 
-/////////////////////////////////////////////
+////// END OF HIDDEN SECTION AND APPEAR WHEN WE RICH IT 
+//////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////
 //// APPEAR CARD OF FORMATION SECTION 
 
 const cards = document.querySelectorAll('.formation-content');
@@ -150,4 +172,8 @@ cards.forEach(c => {
     cardObserve.observe(c);
     c.classList.add('card__hidden');
 });
+
+//// END OF APPEAR CARD OF FORMATION SECTION 
+/////////////////////////////////////////////////
+
 
