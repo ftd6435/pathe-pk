@@ -216,6 +216,7 @@ img{
     padding: .6rem 0;
     font-weight: 400;
     position: relative;
+    cursor: pointer;
 }
 
 .nav_link::before{
@@ -790,10 +791,16 @@ img{
 .available .avai-bg .avai-content .main-btn .btn-txt{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     margin-right: 0;
     width: 80%;
+    margin: auto;
+}
+
+.available .avai-bg .avai-content .main-btn:hover .btn-txt{
+    left: 45%;
+    z-index: 10;
 }
 
 .available .avai-bg .avai-content h1{
@@ -881,7 +888,6 @@ img{
 .contact-block{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* height: 600px; */
     position: relative;
 }
 
@@ -901,13 +907,16 @@ img{
     padding: 4rem;
 }
 
-.contact-form .input-control{
+.contact-form .input-control,
+.c-form-content .input-control{
     margin-bottom: 2rem;
     width: 100%;
 }
 
 .contact-form .input-control input,
-.contact-form .input-control textarea{
+.contact-form .input-control textarea,
+.c-form-content .input-control input,
+.c-form-content .input-control textarea{
     width: 100%;
     padding: 1.5rem 1rem;
     resize: none;
@@ -918,7 +927,9 @@ img{
 }
 
 .contact-form .input-control input::placeholder,
-.contact-form .input-control textarea::placeholder{
+.contact-form .input-control textarea::placeholder,
+.c-form-content .input-control input::placeholder,
+.c-form-content .input-control textarea::placeholder{
     font-weight: 500;
 }
 
@@ -937,6 +948,231 @@ img{
     padding: 1.5rem 3.5rem;
     color: var(--white);
 }
+
+
+/* SINGLE PAGE STYLING START */
+
+/* PARALAX SECTION */
+.paralax{
+    background: url(../img/bg_1.jpg) no-repeat center center/cover fixed;
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.paralax-content{
+    position: absolute;
+    left: 50%;
+    bottom: 7rem;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.paralax-content h1{
+    font-size: 5vw;
+    font-weight: 800;
+}
+
+.paralax-content p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+
+/* SINGLE PAGE MAIN CONTENT STYLING  */
+main{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-auto-rows: auto;
+    gap: 5rem;
+}
+
+.article h2{
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+.article p{
+    margin: 2rem 0;
+    color: var(--light-white);
+    line-height: 2;
+}
+
+.author-card{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    
+    padding: 2.5rem;
+    margin: 4rem 0;
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.author-card h3{
+    font-size: 2rem;
+}
+
+.author-card img{
+    height: 200px;
+}
+
+.comment-content{
+    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c-card{
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4rem;
+
+    margin: 2rem 0;
+}
+
+.c-card img{
+    height: 90px;
+    border-radius: 50%;
+}
+
+.c-card-txt span{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.c-form-content{
+    background: var(--card-bg);
+    padding: 3rem;
+    margin: 4rem 0;
+}
+
+
+.aside form {
+    position: relative;
+}
+
+.aside form .form-content{
+    width: 100%;
+}
+
+.aside form .form-content input{
+    width: 100%;
+    border: none;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+}
+
+.aside form .form-content input::placeholder{
+    font-size: 1.7rem;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+.categories h2, .recent h2, .tag h2, .paragraph h2{
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.categories ul li a{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    margin: 2.5rem 0;
+    color: var(--light-white);
+    transition: color .3s ease;
+}
+
+.categories ul li a:hover {
+    color: var(--primary-color);
+}
+
+.recent-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.r-card{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.r-card img{
+    border-radius: 50%;
+    height: 80px;
+}
+
+.r-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.r-card-content a{
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    transition: color .3s ease;
+}
+
+.r-card-content a:hover{
+    color: var(--primary-color);
+}
+
+.r-card-content span{
+    color: var(--light-white);
+    margin: .5rem 0;
+    font-size: 1.2rem;
+}
+
+.tag{
+    margin: 5rem 0;
+}
+
+.tag-content{
+    margin-top: 5rem;
+}
+
+.tag-content a{
+    display: inline-block;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-white);
+    transition: border .3s ease;
+}
+
+.tag-content a:hover{
+    border: 1px solid transparent;
+}
+
+.paragraph p{
+    color: var(--light-white);
+    line-height: 2;
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+
+/* SINGLE PAGE STYLING ENDS */
 
 /* FOOTER SECTION STYLING  */
 .footer{
@@ -1186,6 +1422,10 @@ img{
 
     .footer .footer-content{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    main{
+        grid-template-columns: 1fr;
     }
 }
 

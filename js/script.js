@@ -12,16 +12,24 @@ const closeBtn = document.querySelector('.fa-xmark');
 //////////////////////////////////////////////
 ///// CODE MENU OPEN AND CLOSE
 
+const menuClose = function(){
+    navLinks.classList.remove('nav-active');
+    menu.classList.remove('menu_hidden');
+    closeBtn.classList.remove('close_active');
+}
+
 menu.addEventListener('click', function(){
     navLinks.classList.add('nav-active');
     menu.classList.add('menu_hidden');
     closeBtn.classList.add('close_active');
 });
 
-closeBtn.addEventListener('click', function(){
-    navLinks.classList.remove('nav-active');
-    menu.classList.remove('menu_hidden');
-    closeBtn.classList.remove('close_active');
+closeBtn.addEventListener('click', menuClose);
+
+navLinks.addEventListener('click', function(e){
+    if(e.target.classList.contains('nav_link')){
+        menuClose();
+    }
 });
 
 //////////////////////////////////////////////
@@ -33,7 +41,7 @@ closeBtn.addEventListener('click', function(){
 
 navlinksAll.forEach(li => {
     li.addEventListener('click', function(e){
-        e.preventDefault();
+        // e.preventDefault();
 
         const id = li.getAttribute('id');
         document.querySelector(id).scrollIntoView({behavior: 'smooth'});
